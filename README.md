@@ -47,7 +47,7 @@ sudo chown root.gpio /dev/gpiomem # change the ownership of /dev/gpio so gpio is
 sudo chmod g+rw /dev/gpiomem  # add read/write rights to the owner gropus
 ```
 
-The **last two** steps must be executed on every startup.
+The **last two** steps must be executed on every startup, the *startup/start.sh* does that.
 
 ## pi_temp_pub
 
