@@ -1,6 +1,6 @@
 # mate_pi_demo
 
-Demonstaration package for ROS2. Runs on a Raspberry Pi 4 with Ubuntu 20.04.
+Demonstration package for ROS2. Runs on a Raspberry Pi 4 with Ubuntu 20.04.
 
 User: **ubuntu**
 
