@@ -8,10 +8,6 @@ public:
     GPIOSrvNode() 
       : rclcpp::Node("pi_gpio_srv")
     {
-        // ensure rights
-        system("sudo chown root.gpio /dev/gpiomem");
-        system("sudo chmod g+rw /dev/gpiomem");
-
         declare_parameter<int>("gpio_pin", 24);
         m_pin = get_parameter("gpio_pin").as_int();
 

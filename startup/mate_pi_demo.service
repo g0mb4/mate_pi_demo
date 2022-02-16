@@ -1,0 +1,11 @@
+[Unit]
+Description="Mate PI Demo"
+
+[Service]
+User=ubuntu
+Type=simple
+StandardOutput=journal+console
+ExecStart=/bin/bash /home/ubuntu/ros2_ws/src/mate_pi_demo/startup/start.sh
+
+[Install]
+WantedBy=multi-user.target
