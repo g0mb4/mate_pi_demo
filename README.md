@@ -12,6 +12,9 @@ Copy the *mate_pi_demo* to the *src* directory of the ROS2 workspace that is ass
 If the worksapce is different modify the path in *startup/start.sh* and in *startup/mate_pi_demo.service*.
 
 ### Install the service:
+
+In order to automatically start the package as soon as the system is ready do:
+
 ```
 sudo cp startup/mate_pi_demo.service /etc/systemd/system/
 sudo systemctl start mate_pi_demo
@@ -49,6 +52,11 @@ sudo chmod g+rw /dev/gpiomem  # add read/write rights to the owner gropus
 
 The **last two** steps must be executed on every startup, the *startup/start.sh* does that.
 
+The pin number is the pin number used by the WiringPi library which can be converted from the physical header using:
+```
+gpio readall
+```
+
 ## pi_temp_pub
 
 The node reads a DS18B20 temperature sensor and publishes its value to the *temperature* topic.
@@ -59,3 +67,9 @@ sudo chmod u+w /boot/firmware/usercfg.txt
 sudo bash -c 'echo "dtoverlay=w1-gpio" >> /boot/firmware/usercfg.txt'
 sudo chmod u-w /boot/firmware/usercfg.txt
 ```
+
+The deivice id can be obtained using:
+```
+ls -l /sys/bus/w1/devices/
+```
+where the prefix *28-* must be omitted.
