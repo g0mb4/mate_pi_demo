@@ -30,6 +30,17 @@ sudo rm /etc/systemd/system/mate_pi_demo.service
 
 ## pi_gpio_srv
 
+Default pinout of *pi_gpio_srv*:
+
+```
+ |...  ...|
+ | 35----------- R220 ----+----+
+ | 37  38 |               |    |
+ | 39---------------------+----+
+ +--------+
+     RPi                   LED
+```
+
 The node creates the *change_pin_state* service that allows the user to turn on/off a GPIO pin.
 
 This package uses the [WiringPI](https://github.com/WiringPi/WiringPi.git) library to interact with the GPIO pin.
@@ -58,6 +69,18 @@ gpio readall
 ```
 
 ## pi_temp_pub
+
+Default pinout of *pi_temp_pub*:
+```
+    RPi                      DS18B20
+ +--------+               +----------+
+ |  1--------------+--------3 VCC    |
+ |  3   4 |        |      |          |
+ |  5   6 |       R4.7k   |          |
+ |  7--------------+--------2 SIGNAL |
+ |  9-----------------------1 GND    |
+ |...  ...|               +----------+
+```
 
 The node reads a DS18B20 temperature sensor and publishes its value to the *temperature* topic.
 
