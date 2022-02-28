@@ -38,7 +38,7 @@ The **last two** steps must be executed on every startup, the *startup/start.sh*
 The ROS2 workspace is assumed to be */home/ubuntu/ros2_ws*.
 If the worksapce is different modify the path in *startup/start.sh* and in *startup/mate_pi_demo.service*.
 
-The package uses the ```example_interfaces``` package which is usually installed by default, if it is not installed install it using:
+The package uses the [example_interfaces](https://github.com/ros2/example_interfaces) package which is usually installed by default, if it is not installed install it using:
 ```
 cd /home/ubuntu/ros2_ws/src
 git clone https://github.com/ros2/example_interfaces.git
