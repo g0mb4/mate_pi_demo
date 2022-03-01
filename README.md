@@ -46,7 +46,7 @@ git clone https://github.com/ros2/example_interfaces.git
 Finally, to install this package type:
 ```
 cd /home/ubuntu/ros2_ws/src
-git clone https://github.com/g0mb4/mate_pi_demo.git
+git clone https://github.com/g0mb4/mate_ros2_pi_demo.git
 cd ..
 colcon build
 ```
